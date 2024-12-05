@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../global.css" />
-    <link rel="stylesheet" href="male.css" />
+    <link rel="stylesheet" href="./male.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/sweetalert2@11.5.0/dist/sweetalert2.min.css"
@@ -28,8 +28,11 @@
       </div>
 
       <div class="icons">
-        <i class="fa-solid fa-user"></i>
-
+        <i class="fa-solid fa-user user-icon"></i>
+        <div class="user-options">
+          <a class="purchase-button" href="/purchase/index.html">historial de compras</a>
+          <button id="logout-btn" class="logout">cerrar sesion</button>
+        </div>
         <!-- Icono de carrito con contador -->
         <a class="cart-icon" href="/carrito/index.html">
           <i class="fa-solid fa-cart-shopping"></i>

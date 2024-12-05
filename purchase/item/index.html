@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carrito de Compras</title>
-    <link rel="stylesheet" href="../global.css" />
-    <link rel="stylesheet" href="carrito.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../global.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/sweetalert2@11.5.0/dist/sweetalert2.min.css"
@@ -19,7 +19,7 @@
   <body>
     <header class="header">
       <div class="logo">
-        <img src="/images/loguito.png" alt="Logo" />
+        <img src="../../public/images/loguito.png" alt="Logo" />
       </div>
 
       <div class="search-bar">
@@ -30,9 +30,7 @@
       <div class="icons">
         <i class="fa-solid fa-user user-icon"></i>
         <div class="user-options">
-          <a class="purchase-button" href="/purchase/index.html"
-            >historial de compras</a
-          >
+          <a class="purchase-button" href="/purchase/index.html">historial de compras</a>
           <button id="logout-btn" class="logout">cerrar sesion</button>
         </div>
         <!-- Icono de carrito con contador -->
@@ -57,31 +55,12 @@
       <!-- Actualiza si tienes la carpeta y archivo de Nosotros -->
     </nav>
 
-    <div class="cart-container">
-      <!-- Tabla de productos -->
-      <table id="cart-items">
-        <thead>
-          <tr>
-            <th>Producto</th>
-            <th>Precio</th>
-            <th>Cantidad</th>
-            <th>Total</th>
-            <th>Acción</th>
-          </tr>
-        </thead>
-        <tbody class="container1">
-          <!-- Aquí se generarán los productos dinámicamente -->
-        </tbody>
-      </table>
-
-      <!-- Resumen de compra -->
-      <div id="cart-summary">
-        <h3>Resumen de la Compra</h3>
-        <p>Total: <span id="total-price" class="total-price">0.00</span></p>
-        <a id="purchase-button" href="/payment/index.html">Realizar Compra</a>
-      </div>
+    <!--Ropas-->
+    <div class="catalog">
+      
     </div>
-    <script type="module" src="carrito.js"></script>
-    <script type="module" src="../components/getProducts.js"></script>
+
+    <script type="module" src="./index.js"></script>
+    <script type="module" src="../../components/getProducts.js"></script>
   </body>
 </html>

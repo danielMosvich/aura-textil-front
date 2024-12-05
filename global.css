@@ -148,3 +148,53 @@ nav a{
     outline: none; /* Quita el borde de enfoque */
   }
   
+  /* some */
+  .icons{
+    position: relative;
+}
+.user-options{
+    user-select: none;
+    /* width: 150px; */
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    top: 150%;
+    left: -250%;
+    position: absolute;
+    /* padding: 10px; */
+    border-radius: 10px;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: start;
+    overflow: hidden;
+    display: none;
+}
+.user-options.active{
+    display: flex;
+}
+.purchase-button {
+    background-color: white;
+    font-size: 1rem;
+    /* background-color: #28a745; */
+    /* width: 100%; */
+    color: black;
+    text-decoration: none;
+    /* white-space: nowrap; */
+    padding: 0;
+    padding: 10px;
+}
+.purchase-button:hover{
+    background-color: rgb(228, 228, 228);
+}
+
+.logout{
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    text-align: start;
+    padding: 0;
+    padding: 10px;
+    border-radius: 0px;
+}
+.logout:hover{
+    background-color: rgb(253, 225, 225);
+}

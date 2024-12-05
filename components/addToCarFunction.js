@@ -5,6 +5,8 @@ export function updateIconCount(){
     // console.log(iconCount)
 }
 updateIconCount()
+
+
 // let cartCount = parseInt(localStorage.getItem('cartCount')) || 0;
 
 // // Obtener los productos del carrito (si existen)

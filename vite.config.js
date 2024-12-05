@@ -13,6 +13,8 @@ export default defineConfig({
         register: 'register/index.html',
         carrito: 'carrito/index.html',
         payment: 'payment/index.html',
+        purchase: 'purchase/index.html',
+        purchaseItem: 'purchase/item/index.html',
         // Agrega más páginas según tu estructura
       }
     }

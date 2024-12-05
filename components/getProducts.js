@@ -5,6 +5,9 @@ let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 let cartCount = JSON.parse(localStorage.getItem('cartCount')) || 0;
 const container = document.querySelector(".catalog")
 const isUserLogin = !!JSON.parse(localStorage.getItem("user"))
+const userIcon = document.querySelector(".user-icon")
+const logout_btn = document.querySelector("#logout-btn")
+
 // console.log(userLogin)
 function calculateCartCount() {
     cartCount = cartItems.reduce((acc, item) => acc + item.quantity, 0)
@@ -28,6 +31,25 @@ async function addToCar(product) {
     }
     cartItems.push({ ...product, quantity: 1 })
     localStorage.setItem('cartItems', JSON.stringify(cartItems))
+    Swal.fire({
+        title: '¡Producto añadido al carrito!',
+        text: 'El producto ha sido agregado a tu carrito.',
+        icon: 'success',
+        confirmButtonText: 'Aceptar',
+        position: 'top',
+        timer: 1500,
+        showConfirmButton: false,
+        customClass: {
+            popup: 'custom-popup'
+        },
+        background: '#28a745',
+        color: '#ffffff',
+        timerProgressBar: true,
+        imageUrl: product.image, // Mostrar la imagen del producto en la alerta
+        imageWidth: 100,
+        imageHeight: 100,
+        imageAlt: product.name
+    });
     calculateCartCount()
 }
 async function getProducts() {
@@ -76,3 +98,17 @@ async function getProducts() {
 
 }
 getProducts()
+
+//  HEADER FUNCTIONS
+userIcon.addEventListener("click", verifyUserOptions)
+// console.log(logout_btn)
+function verifyUserOptions() {
+    if (!isUserLogin) { return window.location.href = "/login/index.html" }
+    const user_option_btn = document.querySelector(".user-options")
+    user_option_btn.classList.toggle("active")
+
+}
+logout_btn.addEventListener("click", () => {
+    localStorage.clear()
+    window.location.href = "/"
+})

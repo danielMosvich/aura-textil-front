@@ -15,12 +15,22 @@ async function validateForm() {
     // FIREBASE CONTECTION
     const usersRef = doc(FirebaseDB, `/users/${user.username}`)
     const usersSnapshot = await getDoc(usersRef)
-    const data = usersSnapshot.data()
-    if (data.password !== user.password) {
+    const userData = usersSnapshot.data()
+
+    const purchaseHistoryRe = collection(FirebaseDB, `/users/${user.username}/purchaseHistory`)
+    const purchaseHistorySnapshot = await getDocs(purchaseHistoryRe)
+    const purchaseHistory = purchaseHistorySnapshot.docs.map((doc) => ({
+        ...doc.data(),
+    }))
+    if (userData.password !== user.password) {
         alert("Invalid username or password")
         return
     }
-    localStorage.setItem("user", JSON.stringify(data))
+    // console.log(purchaseHistory)
+    localStorage.setItem("user", JSON.stringify(userData))
+    if (purchaseHistory.length > 0) {
+        localStorage.setItem("purchaseHistory", JSON.stringify(purchaseHistory))
+    }
     window.location.href = "/"
 }
 
