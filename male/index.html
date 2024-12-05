@@ -1,53 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../global.css">
-    <link rel="stylesheet" href="male.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.5.0/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="../global.css" />
+    <link rel="stylesheet" href="male.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.5.0/dist/sweetalert2.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.5.0/dist/sweetalert2.min.js"></script>
-    <script src="https://kit.fontawesome.com/247dadd944.js" crossorigin="anonymous"></script>
-</head>
-<body>
-
+    <script
+      src="https://kit.fontawesome.com/247dadd944.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <header class="header">
-        <div class="logo">
-            <img src="/images/loguito.png" alt="Logo">
-        </div>
-    
-        <div class="search-bar">
-            <input type="text" placeholder="Buscar...">
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>
-        </div>
-    
-        <div class="icons">
-            <i class="fa-solid fa-user"></i>
-            
-            <!-- Icono de carrito con contador -->
-            <a class="cart-icon" href="/carrito/index.html" >
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span id="cart-count" class="cart-count">0</span> <!-- Contador de productos -->
-            </a>
-        </div>
+      <div class="logo">
+        <img src="../public/images/loguito.png" alt="Logo" />
+      </div>
+
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar..." />
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+
+      <div class="icons">
+        <i class="fa-solid fa-user"></i>
+
+        <!-- Icono de carrito con contador -->
+        <a class="cart-icon" href="/carrito/index.html">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-count" class="cart-count">0</span>
+          <!-- Contador de productos -->
+        </a>
+      </div>
     </header>
 
-
-
-      <!-- <img src="images/anuncio.jpeg" alt="Imagen 1"> -->
+    <!-- <img src="images/anuncio.jpeg" alt="Imagen 1"> -->
     <nav>
-        <a href="/">Inicio</a> <!-- Asume que "Inicio" vuelve al archivo principal -->
-        <a href="/male/index.html">Caballeros</a>
-        <a href="/female/index.html">Damas</a> <!-- Actualiza si tienes la carpeta y archivo de Damas -->
-        <a href="/kids/index.html">Niños</a> <!-- Actualiza si tienes la carpeta y archivo de Niños -->
-        <a href="#">Nosotros</a> <!-- Actualiza si tienes la carpeta y archivo de Nosotros -->
+      <a href="/">Inicio</a>
+      <!-- Asume que "Inicio" vuelve al archivo principal -->
+      <a href="/male/index.html">Caballeros</a>
+      <a href="/female/index.html">Damas</a>
+      <!-- Actualiza si tienes la carpeta y archivo de Damas -->
+      <a href="/kids/index.html">Niños</a>
+      <!-- Actualiza si tienes la carpeta y archivo de Niños -->
+      <a href="#">Nosotros</a>
+      <!-- Actualiza si tienes la carpeta y archivo de Nosotros -->
     </nav>
 
     <!--Ropas-->
     <div class="catalog">
-        <!-- Producto 1 -->
-        <!-- <div class="product">
+      <!-- Producto 1 -->
+      <!-- <div class="product">
             <img src="/images/RopaHombres/camisa.jpg" alt="Producto 1">
             <h3>Camisa</h3>
             <p>S/50.00</p>
@@ -58,9 +66,8 @@
                     data-image="../Hombres/RopaHombres/camisa.jpg">Añadir al carrito</button>
         </div> -->
     </div>
-    
-    <script type="module" src="/components/addToCarFunction.js"></script>
-    <script type="module" src="/components/getProducts.js"></script>
 
-</body>
+    <script type="module" src="../components/addToCarFunction.js"></script>
+    <script type="module" src="../components/getProducts.js"></script>
+  </body>
 </html>
