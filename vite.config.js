@@ -12,7 +12,7 @@ export default defineConfig({
         login: 'login/index.html',
         register: 'register/index.html',
         carrito: 'carrito/index.html',
-
+        payment: 'payment/index.html',
         // Agrega más páginas según tu estructura
       }
     }
