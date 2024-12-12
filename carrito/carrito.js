@@ -1,4 +1,6 @@
-import { updateIconCount } from "../components/addToCarFunction";
+// import { updateIconCount } from "../components/addToCarFunction";
+
+import { updateIconCount } from "../helpers/updateIconCount";
 
 const cartItemsString = localStorage.getItem("cartItems");
 let cartItems = JSON.parse(cartItemsString) || []
@@ -105,4 +107,5 @@ function loadCart() {
 }
 loadCart();
 updateIconCount()
+// updateIconCount()
 

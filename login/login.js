@@ -6,7 +6,7 @@ const password = document.getElementById("password");
 const login_btn = document.getElementById("login_btn");
 
 async function validateForm() {
-    console.log("hola")
+    // console.log("hola")
     const user = {
         username: username.value.trim(),
         password: password.value.trim(),
@@ -22,6 +22,10 @@ async function validateForm() {
     const purchaseHistory = purchaseHistorySnapshot.docs.map((doc) => ({
         ...doc.data(),
     }))
+    if(!userData){
+        alert("Invalid username or password")
+        return
+    }
     if (userData.password !== user.password) {
         alert("Invalid username or password")
         return

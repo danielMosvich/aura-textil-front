@@ -4,16 +4,17 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore/lite";
 // import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
-
+// console.log(import.meta.env.VITE_FIREBASE_API_KEY)
+const key = import.meta.env.VITE_FIREBASE_API_KEY
 const firebaseConfig = {
-    apiKey: "AIzaSyCK7HXaXZJ7Ck3LTUVnw7IMWiE17V4XyOg",
-    authDomain: "aura-textil.firebaseapp.com",
-    projectId: "aura-textil",
-    storageBucket: "aura-textil.firebasestorage.app",
-    messagingSenderId: "685345421168",
-    appId: "1:685345421168:web:73d8d6463cd697f55a41b5",
-    measurementId: "G-YDRB5FRMLM"
-};
+    apiKey: key,
+    authDomain: "aura-textil-7bfc3.firebaseapp.com",
+    projectId: "aura-textil-7bfc3",
+    storageBucket: "aura-textil-7bfc3.firebasestorage.app",
+    messagingSenderId: "431144606432",
+    appId: "1:431144606432:web:3100cabf7158f33723ce85",
+    measurementId: "G-05HBNF5JGV"
+  };
 
 // Initialize Firebase
 export const FirebaseApp = initializeApp(firebaseConfig);
