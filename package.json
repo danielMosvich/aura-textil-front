@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "firebase": "^11.0.2",
-    "jest": "^29.7.0",
     "mysql2": "^3.11.5",
     "notyf": "^3.10.0",
     "sweetalert2": "^11.14.5",

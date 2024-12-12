@@ -8,7 +8,7 @@ import { updateIconCount } from "./updateIconCount";
 const isUserLogin = !!JSON.parse(localStorage.getItem("user"))
 const userIcon = document.querySelector(".user-icon")
 const logout_btn = document.querySelector("#logout-btn")
-async function init(){
+async function init() {
     updateIconCount()
     const products = await getProducts()
     const productsFilter = products.filter(product => product.category === window.location.pathname.split("/")[1])
